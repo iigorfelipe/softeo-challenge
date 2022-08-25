@@ -1,12 +1,19 @@
 import express, { Express } from 'express';
 import db from './database/db';
+import router from './routes';
 
 class App {
   public app: Express;
 
   constructor() {
     this.app = express();
+    this.routes();
   }
+
+  private routes = () => {
+    this.app.use(express.json());
+    this.app.use(router);
+  };
 
   public start = (PORT: string | number): void => {
     this.app.listen(PORT, async () => {
