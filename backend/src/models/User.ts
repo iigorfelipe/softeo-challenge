@@ -4,11 +4,11 @@ import db from '../database/db';
 class UserModel extends Model {
   id: number;
 
-  names: string;
+  name: string;
 
-  values: string;
+  value: string;
 
-  parcels: number;
+  parcel: number;
 
   payday: number;
 }
@@ -20,15 +20,15 @@ UserModel.init({
     primaryKey: true,
     type: DataTypes.INTEGER,
   },
-  names: {
+  name: {
     allowNull: false,
     type: DataTypes.STRING,
   },
-  values: {
+  value: {
     allowNull: false,
     type: DataTypes.STRING,
   },
-  parcels: {
+  parcel: {
     allowNull: false,
     type: DataTypes.INTEGER,
   },
