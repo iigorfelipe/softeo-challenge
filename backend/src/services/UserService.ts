@@ -9,9 +9,9 @@ class UserService {
   };
 
   findAll = async (): Promise<UserModel[]> => {
-    const newUser = await UserModel.findAll();
+    const users = await UserModel.findAll();
 
-    return newUser;
+    return users;
   };
 }
 
