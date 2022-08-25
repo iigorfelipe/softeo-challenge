@@ -18,6 +18,15 @@ class UserController {
 
     return res.status(200).json(newUser);
   };
+
+  findAll = async (
+    _req: Request,
+    res: Response,
+  ): Promise<Response> => {
+    const users = await this.service.findAll();
+
+    return res.status(200).json(users);
+  };
 }
 
 export default new UserController();

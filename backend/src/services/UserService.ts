@@ -7,6 +7,12 @@ class UserService {
 
     return newUser;
   };
+
+  findAll = async (): Promise<UserModel[]> => {
+    const newUser = await UserModel.findAll();
+
+    return newUser;
+  };
 }
 
 export default UserService;
