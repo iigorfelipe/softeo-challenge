@@ -13,6 +13,12 @@ class UserService {
 
     return users;
   };
+
+  findOne = async (id: string): Promise<UserModel | null> => {
+    const user = await UserModel.findOne({ where: { id } });
+
+    return user;
+  };
 }
 
 export default UserService;

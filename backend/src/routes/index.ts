@@ -13,4 +13,9 @@ router.get(
   UserController.findAll,
 );
 
+router.get(
+  '/:id',
+  UserController.findOne,
+);
+
 export default router;

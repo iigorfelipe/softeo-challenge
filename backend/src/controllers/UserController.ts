@@ -27,6 +27,17 @@ class UserController {
 
     return res.status(200).json(users);
   };
+
+  findOne = async (
+    req: Request,
+    res: Response,
+  ): Promise<Response> => {
+    const { id } = req.params;
+
+    const user = await this.service.findOne(id);
+
+    return res.status(200).json(user);
+  };
 }
 
 export default new UserController();
