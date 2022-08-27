@@ -1,17 +1,18 @@
 import express, { Express } from 'express';
+import cors from 'cors';
 import db from './database/db';
 import router from './routes';
 
 class App {
-  public app: Express;
+  public app: Express = express();
 
   constructor() {
-    this.app = express();
+    this.app.use(express.json());
+    this.app.use(cors());
     this.routes();
   }
 
   private routes = () => {
-    this.app.use(express.json());
     this.app.use(router);
   };
 
