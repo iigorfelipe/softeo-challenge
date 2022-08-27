@@ -9,12 +9,12 @@ router.post(
 );
 
 router.get(
-  '/',
+  '/users',
   UserController.findAll,
 );
 
 router.get(
-  '/:id',
+  '/user/:id',
   UserController.findOne,
 );
 
