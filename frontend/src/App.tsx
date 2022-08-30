@@ -3,6 +3,7 @@ import GlobalStyle from './styles/global';
 import { theme } from './styles/theme';
 import Main from './pages/Main';
 import AppRoutes from './routes';
+import UserContextProvider from './contexts/UserProvider';
 
 const App = (): JSX.Element => {
   return (
@@ -10,9 +11,13 @@ const App = (): JSX.Element => {
   
       <GlobalStyle />
 
-        <AppRoutes>
-          <Main />
-        </AppRoutes>
+      <UserContextProvider>
+
+          <AppRoutes>
+            <Main />
+          </AppRoutes>
+
+      </UserContextProvider>
   
     </ThemeProvider>
   );
