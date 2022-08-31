@@ -1,44 +1,34 @@
 import { useContext } from 'react';
 import UserContext from '../../contexts/UserContext';
-import { formatToBRL } from '../../utils/formatToCurrencies';
 import { Icon } from '@iconify/react';
 import * as C from './styles';
 import swal from 'sweetalert';
+import * as H from '../../helpers/calculateValues';
 
 const Header = (): JSX.Element => {
   const { users } = useContext(UserContext);
 
   const values = users.map((user) => +user.value);
   const parcels = users.map((user) => user.parcel);
-  const array: number[] = [];
-
-  values.forEach((value, i) => {
-    parcels.forEach((parcel, y) => {
-      if (i === y) {
-        array.push(value / parcel);
-      }
-    });
-  });
-
-  const sumOfValues = values.reduce((a, b) => a + b, 0);
-  const sumOfParcels = parcels.reduce((a, b) => a + b, 0);
-  const sumOfMouth = array.reduce((a, b) => a + b, 0);
+  const monthTotal = H.divideOfValues(values, parcels);
 
   return (
     <C.Container>
 
       <C.Details>
         <C.Detail>Usuários: {users.length}</C.Detail>
-        <C.Detail>Parcelas: {sumOfParcels}</C.Detail>
+        <C.Detail>Parcelas: {H.sumOfValues(parcels)}</C.Detail>
 
         <C.NextPage>
+
           <C.Link href='/users/details'>Cálculo detalhado</C.Link>
-        </C.NextPage>      
+
+        </C.NextPage>
       </C.Details>
   
 
       <C.Values>
-        <C.Detail>{formatToBRL(sumOfValues)}</C.Detail>
+        <C.Detail>{H.sumOfValuesFormatted(values)}</C.Detail>
 
         <C.IconQuestion>
 
@@ -47,16 +37,16 @@ const Header = (): JSX.Element => {
             onClick={() => swal(
               'Valores a receber',
               `Total:
-              ${formatToBRL(sumOfValues)}
+              ${H.sumOfValuesFormatted(values)}
     
               Neste mês:
-              ${formatToBRL(sumOfMouth)}`
+              ${H.sumOfValuesFormatted(monthTotal)}`
             )}
           />
 
         </C.IconQuestion>
 
-        <C.Detail>{formatToBRL(sumOfMouth)}</C.Detail>
+        <C.Detail>{H.sumOfValuesFormatted(monthTotal)}</C.Detail>
       </C.Values>
 
     </C.Container>
