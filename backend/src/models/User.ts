@@ -6,7 +6,7 @@ class UserModel extends Model {
 
   name: string;
 
-  value: string;
+  value: number;
 
   parcel: number;
 
@@ -26,7 +26,7 @@ UserModel.init({
   },
   value: {
     allowNull: false,
-    type: DataTypes.STRING,
+    type: DataTypes.DECIMAL(10, 2),
   },
   parcel: {
     allowNull: false,
