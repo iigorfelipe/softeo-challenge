@@ -1,7 +1,9 @@
 import { useContext } from 'react';
 import UserContext from '../../contexts/UserContext';
 import { formatToBRL } from '../../utils/formatToCurrencies';
+import { Icon } from '@iconify/react';
 import * as C from './styles';
+import swal from 'sweetalert';
 
 const Header = (): JSX.Element => {
   const { users } = useContext(UserContext);
@@ -37,6 +39,23 @@ const Header = (): JSX.Element => {
 
       <C.Values>
         <C.Detail>{formatToBRL(sumOfValues)}</C.Detail>
+
+        <C.IconQuestion>
+
+          <Icon
+            icon='ant-design:question-circle-filled'
+            onClick={() => swal(
+              'Valores a receber',
+              `Total:
+              ${formatToBRL(sumOfValues)}
+    
+              Neste mês:
+              ${formatToBRL(sumOfMouth)}`
+            )}
+          />
+
+        </C.IconQuestion>
+
         <C.Detail>{formatToBRL(sumOfMouth)}</C.Detail>
       </C.Values>
 
