@@ -5,5 +5,5 @@ export const formatToBRL = (value: number): string => {
     minimumFractionDigits: 2,
   });
 
-  return price.format(+value)
+  return price.format(+value);
 }
