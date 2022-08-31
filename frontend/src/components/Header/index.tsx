@@ -25,7 +25,6 @@ const Header = (): JSX.Element => {
 
         </C.NextPage>
       </C.Details>
-  
 
       <C.Values>
         <C.Detail>{H.sumOfValuesFormatted(values)}</C.Detail>
