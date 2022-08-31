@@ -34,3 +34,15 @@ export const Values = styled.div`
   flex-direction: column;
   padding: 5px;
 `;
+
+export const IconQuestion = styled.div`
+  display: flex;
+  color: blue;
+  font-size: 1.5em;
+  margin-right: 15px;
+  align-items: center;
+
+  &:hover {
+    color: red;
+  }
+`;
