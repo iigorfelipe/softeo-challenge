@@ -18,4 +18,9 @@ router.get(
   UserController.findOne,
 );
 
+router.delete(
+  '/user/:id',
+  UserController.delete,
+);
+
 export default router;

@@ -38,6 +38,14 @@ class UserController {
 
     return res.status(200).json(user);
   };
+
+  delete = async (
+    req: Request,
+  ): Promise<void> => {
+    const { id } = req.params;
+
+    await this.service.delete(id);
+  };
 }
 
 export default new UserController();

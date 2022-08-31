@@ -19,6 +19,10 @@ class UserService {
 
     return user;
   };
+
+  delete = async (id: string): Promise<void> => {
+    await UserModel.destroy({ where: { id } });
+  };
 }
 
 export default UserService;
