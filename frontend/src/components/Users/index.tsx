@@ -2,7 +2,7 @@ import * as C from './styles';
 import { useContext } from 'react';
 import UserContext from '../../contexts/UserContext';
 import { Icon } from '@iconify/react';
-import { formatToBRL } from '../../utils/formatToCurrencies';
+import { formatToBRL } from '../../helpers/formatToCurrencies';
 
 const Users = (): JSX.Element => {
   const { users } = useContext(UserContext);
