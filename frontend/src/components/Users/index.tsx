@@ -1,30 +1,30 @@
 import * as C from './styles';
-import { UsersType } from '../../types/UsersType';
-import { useState } from 'react';
-import getAllUser from '../../api/getAllUsers';
+import { useContext } from 'react';
+import UserContext from '../../contexts/UserContext';
 import { Icon } from '@iconify/react';
+import { formatToBRL } from '../../utils/formatToCurrencies';
 
-const Users = () => {
-  const [users, setUsers] = useState<UsersType[]>();
-  
-  getAllUser().then((response) => setUsers(response.data));
+const Users = (): JSX.Element => {
+  const { users } = useContext(UserContext);
+
   return (
     <C.Container>
       {
-        users &&
-        users.map((item) => (
-          <C.Users key={item.id}>
+        users.map((user) => (
+          <C.Users key={user.id}>
 
             <C.User>
               <Icon
                 icon='healthicons:ui-user-profile-outline'
                 width='45'
                 height='45'
-                />
-                {item.name}
+              />
+              {user.name}
             </C.User>
 
-            <C.User>{item.value}</C.User>
+            <C.User>
+              {formatToBRL(+user.value)}
+            </C.User>
 
           </C.Users>
         ))
