@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Main from '../pages/Main';
+import UserDetails from '../pages/Users';
 
 interface IProps {};
 
@@ -13,7 +14,7 @@ const AppRoutes: React.FC<IProps> = () => {
         <Route path='/users' element={ <Main /> } />
 
         {/* <Route path='/users/details' element={ <UsersDetails /> } /> */}
-        {/* <Route path='/user/:id' element={ <UserDetail /> } /> */}
+        <Route path='/user/:id' element={ <UserDetails /> } />
 
       </Routes>
     </BrowserRouter>
