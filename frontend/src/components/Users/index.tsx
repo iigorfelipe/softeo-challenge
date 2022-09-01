@@ -3,15 +3,17 @@ import { useContext } from 'react';
 import UserContext from '../../contexts/UserContext';
 import { Icon } from '@iconify/react';
 import { formatToBRL } from '../../helpers/formatToCurrencies';
+import { useNavigate } from 'react-router-dom';
 
 const Users = (): JSX.Element => {
   const { users } = useContext(UserContext);
+  const navigate = useNavigate();
 
   return (
     <C.Container>
       {
         users.map((user) => (
-          <C.Users key={user.id}>
+          <C.Users key={user.id} onClick={() => navigate(`../user/${user.id}`)}>
 
             <C.User>
               <Icon
