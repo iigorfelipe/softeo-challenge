@@ -5,3 +5,7 @@ export type UsersType = {
   parcel: number;
   payday: number;
 }
+
+export type UserProps = {
+  user: UsersType;
+}
