@@ -23,7 +23,6 @@
 
 </p>
 
-<hr>
 <br>
 
 ## Development Tools
@@ -36,7 +35,6 @@
 
 </p>
 
-<hr>
 <br>
 <br>
 
@@ -52,7 +50,6 @@
 
 </p>
 
-<hr>
 <br>
 
 ## Development Tools
@@ -63,7 +60,6 @@
 
 </p>
 
-<hr>
 <br>
 
 ## References
