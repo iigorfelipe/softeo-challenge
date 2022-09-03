@@ -1,16 +1,38 @@
-import { divideOfValues } from '../../../helpers/calculateValues';
+import { useState } from 'react';
 import { formatToBRL } from '../../../helpers/formatToCurrencies';
 import { UserProps } from '../../../types/UsersType';
 import * as C from './styles';
 
 const UserDetailsFilter = ({ user }: UserProps) => {
-  const value = formatToBRL(+user.value / user.parcel);
+  const initialValue = +user.value / user.parcel;
+  
+  const [value, setValue] = useState(initialValue);
+  const [period, setPeriod] = useState('mês');
+  const [option1] = useState(3);
+  const [option2] = useState(6);
+  const [option3] = useState(1);
+
+  const totalValueOfMonth = formatToBRL(value);
+
+  const calculate = (option: number) => {
+    const sum = option * initialValue;
+
+    if (option === option1) setValue(sum);
+    if (option === option2) setValue(sum);
+    if (option === option3) setValue(sum * 12);
+
+    setPeriod('período');
+  };
+  
+  const customCalculate = () => {
+    console.log('CLICOU');
+  };
 
   return (
     <C.Container>
 
       <C.Message>
-        {`Neste mês você receberá ${value} de ${user.name}`}
+        {`Neste ${period} você receberá ${totalValueOfMonth}`}
       </C.Message>
 
       <C.P>Verifique outros períodos:</C.P>
@@ -21,8 +43,10 @@ const UserDetailsFilter = ({ user }: UserProps) => {
 
           <C.Filter>
 
-            <C.Border>
-              <C.Number>3</C.Number>
+            <C.Border onClick={() => calculate(option1)}>
+              <C.Number>
+                {option1}
+              </C.Number>            
             </C.Border>
 
             <C.Data>meses</C.Data>
@@ -31,8 +55,10 @@ const UserDetailsFilter = ({ user }: UserProps) => {
           
           <C.Filter>
 
-            <C.Border>
-              <C.Number>6</C.Number>
+            <C.Border onClick={() => calculate(option2)}>
+              <C.Number>
+                {option2}
+              </C.Number>            
             </C.Border>
 
             <C.Data>meses</C.Data>
@@ -41,8 +67,10 @@ const UserDetailsFilter = ({ user }: UserProps) => {
           
           <C.Filter>
 
-            <C.Border>
-              <C.Number>1</C.Number>
+            <C.Border onClick={() => calculate(option3)}>
+              <C.Number>
+                {option3}
+              </C.Number>            
             </C.Border>
 
             <C.Data>ano</C.Data>
@@ -51,7 +79,7 @@ const UserDetailsFilter = ({ user }: UserProps) => {
 
         </C.Filters>
 
-        <C.CustomFilter>
+        <C.CustomFilter onClick={() => customCalculate()}>
           Escolha um outro período
         </C.CustomFilter>
       
