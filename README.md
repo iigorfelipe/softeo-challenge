@@ -61,3 +61,23 @@
   <img width="48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="vscode-logo"/>
 
 </p>
+
+## References
+
+### Backend:
+
+- [Sequelize (Model.init) - Docs](https://sequelize.org/docs/v6/other-topics/typescript/#the-case-of-modelinit)
+
+- [Trybe - Course](https://app.betrybe.com/course)
+
+### Frontend:
+
+- [Vitejs - Docs](https://vitejs.dev/guide/)
+
+- [Axios - Docs](https://axios-http.com/ptbr/docs/intro)
+
+- [Iconfy - Site](https://icon-sets.iconify.design/?query=home)
+
+- [Sweetalert - Docs](https://www.npmjs.com/package/sweetalert)
+
+- [styled-components - Docs](https://styled-components.com/docs)
