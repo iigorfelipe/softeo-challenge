@@ -10,14 +10,17 @@ const Header = (): JSX.Element => {
 
   const values = users.map((user) => +user.value);
   const parcels = users.map((user) => user.parcel);
-  const monthTotal = H.divideOfValues(values, parcels);
+
+  const totalValue = H.sumOfValuesFormatted(values);
+  const totalParcels = H.sumOfValues(parcels);
+  const totalValueOfMonth = H.sumOfValuesFormatted(H.divideOfValues(values, parcels));
 
   return (
     <C.Container>
 
       <C.Details>
         <C.Detail>Usuários: {users.length}</C.Detail>
-        <C.Detail>Parcelas: {H.sumOfValues(parcels)}</C.Detail>
+        <C.Detail>Parcelas: {totalParcels}</C.Detail>
 
         <C.NextPage>
 
@@ -27,7 +30,7 @@ const Header = (): JSX.Element => {
       </C.Details>
 
       <C.Values>
-        <C.Detail>{H.sumOfValuesFormatted(values)}</C.Detail>
+        <C.Detail>{totalValue}</C.Detail>
 
         <C.IconQuestion>
 
@@ -36,16 +39,16 @@ const Header = (): JSX.Element => {
             onClick={() => swal(
               'Valores a receber',
               `Total:
-              ${H.sumOfValuesFormatted(values)}
+              ${totalValue}
     
               Neste mês:
-              ${H.sumOfValuesFormatted(monthTotal)}`
+              ${totalValueOfMonth}`
             )}
           />
 
         </C.IconQuestion>
 
-        <C.Detail>{H.sumOfValuesFormatted(monthTotal)}</C.Detail>
+        <C.Detail>{totalValueOfMonth}</C.Detail>
       </C.Values>
 
     </C.Container>
