@@ -15,7 +15,7 @@ const UserDetailsInfos = ({ user }: UserProps): JSX.Element => {
 
       <C.Infos>
 
-        <C.Contanct>{`${user.name}'s Contacts`}</C.Contanct>
+        <C.Contanct>Contatos de {user.name}</C.Contanct>
 
         <C.Contanct>
 
@@ -46,8 +46,8 @@ const UserDetailsInfos = ({ user }: UserProps): JSX.Element => {
       <C.Details>
 
         <C.Values>{formatToBRL(+user.value)}</C.Values>
-        <C.Values>{`Parcels: ${user.parcel}`}</C.Values>
-        <C.Values>{`Payday: ${user.payday}`}</C.Values>
+        <C.Values>Parcelas: {user.parcel}</C.Values>
+        <C.Values>Vencimento: {user.payday}</C.Values>
   
       </C.Details>
   
