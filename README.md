@@ -2,7 +2,7 @@
 
 <p align="center">
   <i>
-    This is a repository used to store a technical challenge I received from Softeo.
+    This is a repository used to store a technical challenge I received from <a href="https://softeo.com.br/">Softeo</a>.
   </i>
 </p>
 
@@ -24,6 +24,7 @@
 </p>
 
 <hr>
+<br>
 
 ## Development Tools
 
@@ -36,7 +37,6 @@
 </p>
 
 <hr>
-<br>
 <br>
 <br>
 
@@ -53,6 +53,7 @@
 </p>
 
 <hr>
+<br>
 
 ## Development Tools
 
@@ -62,15 +63,18 @@
 
 </p>
 
+<hr>
+<br>
+
 ## References
 
-### Backend:
+- ## Backend:
 
 - [Sequelize (Model.init) - Docs](https://sequelize.org/docs/v6/other-topics/typescript/#the-case-of-modelinit)
 
 - [Trybe - Course](https://app.betrybe.com/course)
 
-### Frontend:
+- ## Frontend:
 
 - [Vitejs - Docs](https://vitejs.dev/guide/)
 
