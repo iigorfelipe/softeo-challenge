@@ -36,7 +36,7 @@ export const Details = styled.div`
   margin: 2px;
   padding: 2px;
   align-items: center;
-  width: 60%;
+  width: 78%;
 `;
 
 export const Values = styled.div`
