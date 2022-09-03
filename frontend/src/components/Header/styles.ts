@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid blueviolet;
   display: flex;
   justify-content: space-between;
   padding: 10px 5px 0px 5px;
@@ -37,7 +37,7 @@ export const Values = styled.div`
 
 export const IconQuestion = styled.div`
   display: flex;
-  color: blue;
+  color: blueviolet;
   font-size: 1.5em;
   margin-right: 15px;
   align-items: center;

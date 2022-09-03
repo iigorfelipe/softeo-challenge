@@ -10,7 +10,7 @@ export const Users = styled.div`
   align-items: center;
   margin: 10px;
   padding: 2px 5px;
-  border: 1px solid gray;
+  border: 1px solid blueviolet;
   border-radius: 5px;
   font-size: large;
 `;

@@ -6,7 +6,7 @@ export const Container = styled.div`
 
 export const Infos = styled.div`
   font-size: 1.1em;
-  border: 1px solid gray;
+  border: 1px solid blueviolet;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ export const Infos = styled.div`
 
 export const Contanct = styled.div`
   margin: 5px 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid blueviolet;
 `;
 
 export const Icon = styled.div`
@@ -29,7 +29,7 @@ export const Icon = styled.div`
 
 export const Details = styled.div`
   font-size: 1.1em;
-  border: 1px solid gray;
+  border: 1px solid blueviolet;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -41,5 +41,5 @@ export const Details = styled.div`
 
 export const Values = styled.div`
   margin: 10px 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid blueviolet;
 `;
