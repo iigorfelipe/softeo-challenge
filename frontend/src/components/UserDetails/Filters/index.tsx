@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { formatToBRL } from '../../../helpers/formatToCurrencies';
 import { UserProps } from '../../../types/UsersType';
+import swal from 'sweetalert';
 import * as C from './styles';
 
 const UserDetailsFilter = ({ user }: UserProps) => {
@@ -15,15 +16,23 @@ const UserDetailsFilter = ({ user }: UserProps) => {
   const totalValueOfMonth = formatToBRL(value);
 
   const calculate = (option: number) => {
+    if (option === option3) option = 12;
+
     const sum = option * initialValue;
 
-    if (option === option1) setValue(sum);
-    if (option === option2) setValue(sum);
-    if (option === option3) setValue(sum * 12);
+    if (+user.value >= sum) {
+      if (option === option1) setValue(sum);
+      if (option === option2) setValue(sum);
+      if (option === 12) setValue(sum);
 
-    setPeriod('período');
+      setPeriod('período');
+    } else {    
+      swal(
+        `${user.name} possui apenas ${user.parcel} parcelas`
+      )
+    }
   };
-  
+
   const customCalculate = () => {
     console.log('CLICOU');
   };
@@ -46,13 +55,13 @@ const UserDetailsFilter = ({ user }: UserProps) => {
             <C.Border onClick={() => calculate(option1)}>
               <C.Number>
                 {option1}
-              </C.Number>            
+              </C.Number>    
             </C.Border>
 
             <C.Data>meses</C.Data>
 
           </C.Filter>
-          
+
           <C.Filter>
 
             <C.Border onClick={() => calculate(option2)}>
@@ -64,7 +73,7 @@ const UserDetailsFilter = ({ user }: UserProps) => {
             <C.Data>meses</C.Data>
 
           </C.Filter>
-          
+
           <C.Filter>
 
             <C.Border onClick={() => calculate(option3)}>
@@ -82,7 +91,7 @@ const UserDetailsFilter = ({ user }: UserProps) => {
         <C.CustomFilter onClick={() => customCalculate()}>
           Escolha um outro período
         </C.CustomFilter>
-      
+
       </C.FilterContainer>
 
     </C.Container>
