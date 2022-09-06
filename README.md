@@ -38,6 +38,37 @@
 <br>
 <br>
 
+# Install
+
+- with npm
+
+```
+git clone 
+```
+
+```
+cd softeo-challenge
+```
+
+```
+cd backend
+```
+
+```
+npm install
+```
+
+# Local Usage
+
+- with npm
+
+```
+npm run dev
+```
+
+<br>
+<br>
+
 # Frontend
 
 ## Technologies
@@ -62,7 +93,38 @@
 
 <br>
 
-## References
+# Install
+
+- with npm
+
+```
+git clone 
+```
+
+```
+cd softeo-challenge
+```
+
+```
+cd frontend
+```
+
+```
+npm install
+```
+
+# Local Usage
+
+- with npm
+
+```
+npm run dev
+```
+
+<br>
+<br>
+
+# References
 
 - ## Backend:
 
