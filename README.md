@@ -143,3 +143,7 @@ npm run dev
 - [Sweetalert - Docs](https://www.npmjs.com/package/sweetalert)
 
 - [styled-components - Docs](https://styled-components.com/docs)
+
+- [DateTimeFormat - Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+
+- [NumberFormat - Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
