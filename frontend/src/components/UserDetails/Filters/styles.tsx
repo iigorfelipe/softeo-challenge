@@ -19,7 +19,7 @@ export const FilterContainer = styled.div`
   margin: 5px;
 `;
 
-export const P = styled.p`
+export const Paragraph = styled.div`
   margin: 5px;
   display: flex;
   justify-content: center;
