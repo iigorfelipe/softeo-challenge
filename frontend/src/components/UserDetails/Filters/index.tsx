@@ -1,36 +1,43 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { UserProps } from '../../../types/UsersType';
-import swal from 'sweetalert';
+import { Icon } from '@iconify/react';
 import * as H from '../../../helpers'
 import * as C from './styles';
-import { Icon } from '@iconify/react';
+import swal from 'sweetalert';
 
 const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
-  const initialValue = +user.value / user.parcel;
-
-  const [value, setValue] = useState(initialValue);
-  const [textPeriod, setTextPeriod] = useState('mês');
-  const [customDate, setCustomDate] = useState<string>('');
-
   const [option1] = useState(3);
   const [option2] = useState(6);
   const [option3] = useState(1);
 
-  const totalValueOfMonth = H.formatCurrencyToBRL(value);
+  const [dataPeriod, setDataPeriod] = useState('');
+  const [customDate, setCustomDate] = useState('');
+  const [periodValue, setPeriodValue] = useState('');
 
-  const [periodValue, setPeriodValue] = useState(totalValueOfMonth);
+  useEffect(() => {
+    const date = H.dateWithFixedDay(new Date(), user.payday);
+    const initialDataPeriod = H.formatDateToBRL(date, 'long');
+    const initialPeriodValue = H.formatCurrencyToBRL(+user.value / user.parcel);
+    
+    setDataPeriod(initialDataPeriod);
+    setPeriodValue(initialPeriodValue);
+  }, []);
 
   const calculate = (option: number) => {
     if (option === option3) option = 12;
 
-    const sum = option * initialValue;
+    const sum = (option * +user.value / user.parcel);
 
     if (+user.value >= sum) {
-      if (option === option1) setValue(sum);
-      if (option === option2) setValue(sum);
-      if (option === 12) setValue(sum);
+      const date = H.dateWithFixedDay(new Date(), user.payday);
 
-      setTextPeriod('período');
+      date.setMonth(date.getMonth() + option);
+
+      const newDataPeriod = H.formatDateToBRL(date, 'long');
+      const newPeriodValue = H.formatCurrencyToBRL(sum);
+      
+      setDataPeriod(newDataPeriod);
+      setPeriodValue(newPeriodValue);
     } else {
       swal(
         `${user.name} possui apenas ${user.parcel} parcelas`
@@ -39,22 +46,23 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
   };
 
   const customCalculate = () => {
-    const currentDate = H.currentDate();
-
-    const customDateWithFixedDay = H.dateWithFixedDay(customDate, +user.payday);
-    const currentDateWithFixedDay = H.dateWithFixedDay(currentDate, +user.payday);
+    const chosenDate = H.dateWithFixedDay(customDate, +user.payday);
+    const currentDate = H.dateWithFixedDay(new Date(), +user.payday);
 
     const newPeriodValue = H.calculatesTheValueOfTheChosenPeriod(
-      customDateWithFixedDay,
+      chosenDate,
       user.parcel,
-      initialValue,
-      currentDateWithFixedDay
+      +user.value / user.parcel,
+      currentDate
     );
 
     if (newPeriodValue) {
       const formattedPeriodValue = H.formatCurrencyToBRL(newPeriodValue);
 
       setPeriodValue(formattedPeriodValue);
+      const date = H.formatDateToBRL(chosenDate, 'long');
+
+      setDataPeriod(`${date}`);
     }
   };
 
@@ -62,10 +70,16 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
     <C.Container>
 
       <C.Message>
-        {`Neste ${textPeriod} você receberá ${periodValue}`}
+
+        <C.Paragraph>{dataPeriod}</C.Paragraph>
+
+        O valor total recebido será de:
+
+        <C.Paragraph>{periodValue}</C.Paragraph>
+
       </C.Message>
 
-      <C.P>Verifique outros períodos:</C.P>
+      <C.Paragraph>Verifique outros períodos:</C.Paragraph>
 
       <C.FilterContainer>
 
@@ -109,7 +123,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
 
         </C.Filters>
 
-        <C.P>Ou escolha um período personalizado
+        <C.Paragraph>Ou escolha um período personalizado
   
           <C.IconQuestion>
 
@@ -127,7 +141,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
 
           </C.IconQuestion>
 
-        </C.P>
+        </C.Paragraph>
 
         <C.CustomFilter>
 
