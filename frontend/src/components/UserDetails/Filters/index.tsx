@@ -79,7 +79,26 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
 
       </C.Message>
 
-      <C.Paragraph>Verifique outros períodos:</C.Paragraph>
+      <C.Paragraph>
+        Verifique outros períodos:
+
+        <C.IconQuestion>
+
+          <Icon
+            icon='ant-design:question-circle-filled'
+            onClick={() => swal(
+              'Períodos fixos',
+              `
+                Escolha um dos períodos já definidos para o cálculo ser realizado.
+
+                Obs: O dia será ajustado para o mesmo da data de vencimento da parcela.
+              `
+            )}
+          />
+
+        </C.IconQuestion>
+
+      </C.Paragraph>
 
       <C.FilterContainer>
 
@@ -123,7 +142,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
 
         </C.Filters>
 
-        <C.Paragraph>Ou escolha um período personalizado
+        <C.Paragraph>Ou escolha um período personalizado:
   
           <C.IconQuestion>
 
@@ -132,7 +151,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
               onClick={() => swal(
                 'Período personalizado',
                 `
-                  Define você mesmo uma data e clique no circulo de "check" para calcularmos o período definido
+                  Define você mesmo uma data e clique no circulo de "check" para calcularmos o período definido.
 
                   Obs: O dia será ajustado para o mesmo da data de vencimento da parcela.
                 `
