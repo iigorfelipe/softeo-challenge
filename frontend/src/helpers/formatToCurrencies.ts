@@ -1,4 +1,4 @@
-const formatToBRL = (value: number): string => {
+const formatCurrencyToBRL = (value: number): string => {
   const price = new Intl.NumberFormat('pt-br', {
     currency: 'BRL',
     style: 'currency',
@@ -9,5 +9,5 @@ const formatToBRL = (value: number): string => {
 }
 
 export {
-  formatToBRL
+  formatCurrencyToBRL
 };

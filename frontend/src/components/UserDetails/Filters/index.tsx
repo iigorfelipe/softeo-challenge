@@ -16,7 +16,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
   const [option2] = useState(6);
   const [option3] = useState(1);
 
-  const totalValueOfMonth = H.formatToBRL(value);
+  const totalValueOfMonth = H.formatCurrencyToBRL(value);
 
   const [periodValue, setPeriodValue] = useState(totalValueOfMonth);
 
@@ -52,7 +52,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
     );
 
     if (newPeriodValue) {
-      const formattedPeriodValue = H.formatToBRL(newPeriodValue);
+      const formattedPeriodValue = H.formatCurrencyToBRL(newPeriodValue);
 
       setPeriodValue(formattedPeriodValue);
     }

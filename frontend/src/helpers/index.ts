@@ -11,14 +11,14 @@ import {
   currentDate
 } from './handleDates';
 
-import { formatToBRL } from './formatToCurrencies';
+import { formatCurrencyToBRL } from './formatToCurrencies';
 
 export {
   divideOfValues,
   sumOfValues,
   sumOfValuesFormatted,
   formatDateToBRL,
-  formatToBRL,
+  formatCurrencyToBRL,
   dateWithFixedDay,
   currentDate,
   calculatesTheValueOfTheChosenPeriod,
