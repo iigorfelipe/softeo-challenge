@@ -29,6 +29,7 @@ export const P = styled.p`
 export const Filters = styled.div`
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 15px;
 `;
 
 export const Filter = styled.div`
@@ -59,16 +60,32 @@ export const Data = styled.p`
 `;
 
 export const CustomFilter = styled.div`
-  border: 1px solid blueviolet;
-  border-radius: 5px;
-  margin: 15px;
-  padding: 10px;
+  margin-top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2em;
 `;
 
-export const ButtonCustomFilter = styled.div`
+export const Calendar = styled.input`
+  background: transparent;
+  color: #fff;
+  font-size: medium;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  padding: 10px;
 `;
 
+export const IconQuestion = styled.div`
+  display: flex;
+  color: blueviolet;
+  font-size: 1.5em;
+  align-items: center;
+`;
+
+export const IconCheck = styled.div`
+  display: flex;
+  color: blueviolet;
+  font-size: 2.5em;
+  align-items: center;
+  margin-left: 5px;
+`;
