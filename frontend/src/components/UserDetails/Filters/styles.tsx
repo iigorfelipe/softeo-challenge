@@ -5,7 +5,9 @@ export const Container = styled.div``;
 export const Message = styled.div`
   margin: 15px 3px;
   padding: 5px;
+  font-size: 1.1em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid blueviolet;
@@ -21,6 +23,7 @@ export const FilterContainer = styled.div`
 
 export const Paragraph = styled.div`
   margin: 5px;
+  padding: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
