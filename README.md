@@ -147,3 +147,7 @@ npm run dev
 - [DateTimeFormat - Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 
 - [NumberFormat - Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+
+- [Como criar parcelas com data mês a mês - Objeto Date Javascript e nodejs - Video](https://www.youtube.com/watch?v=konXXMyM5Es&ab_channel=DevByMarcos)
+
+- [Date - Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date)
