@@ -1,4 +1,4 @@
-import { formatToBRL } from './formatToCurrencies';
+import * as H from '.';
 
 const sumOfValues = (values: number[]): number => {
   const sum = values.reduce((a: number, b: number) => a + b, 0);
@@ -9,7 +9,7 @@ const sumOfValues = (values: number[]): number => {
 const sumOfValuesFormatted = (values: number[]): string => {
   const sum = values.reduce((a: number, b: number) => a + b, 0);
 
-  return formatToBRL(sum);
+  return H.formatToBRL(sum);
 };
 
 const divideOfValues = (values: number[], parcels: number[]): number[] => {
