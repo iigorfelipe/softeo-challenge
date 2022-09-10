@@ -2,7 +2,7 @@ import * as C from './styles';
 import { useContext } from 'react';
 import UserContext from '../../contexts/UserContext';
 import { Icon } from '@iconify/react';
-import { formatToBRL } from '../../helpers/formatToCurrencies';
+import * as H from '../../helpers';
 import { useNavigate } from 'react-router-dom';
 
 const Users = (): JSX.Element => {
@@ -25,7 +25,7 @@ const Users = (): JSX.Element => {
             </C.User>
 
             <C.User>
-              {formatToBRL(+user.value)}
+              {H.formatCurrencyToBRL(+user.value)}
             </C.User>
 
           </C.Users>

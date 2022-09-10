@@ -9,7 +9,7 @@ const sumOfValues = (values: number[]): number => {
 const sumOfValuesFormatted = (values: number[]): string => {
   const sum = values.reduce((a: number, b: number) => a + b, 0);
 
-  return H.formatToBRL(sum);
+  return H.formatCurrencyToBRL(sum);
 };
 
 const divideOfValues = (values: number[], parcels: number[]): number[] => {

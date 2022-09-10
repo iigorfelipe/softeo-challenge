@@ -1,7 +1,7 @@
 import { UserProps } from '../../../types/UsersType';
 import { Icon } from '@iconify/react';
 import * as C from './styles';
-import { formatToBRL } from '../../../helpers/formatToCurrencies';
+import * as H from '../../../helpers';
 
 const UserDetailsInfos = ({ user }: UserProps): JSX.Element => {
 
@@ -45,7 +45,7 @@ const UserDetailsInfos = ({ user }: UserProps): JSX.Element => {
 
       <C.Details>
 
-        <C.Values>{formatToBRL(+user.value)}</C.Values>
+        <C.Values>{H.formatCurrencyToBRL(+user.value)}</C.Values>
         <C.Values>Parcelas: {user.parcel}</C.Values>
         <C.Values>Vencimento: {user.payday}</C.Values>
   
