@@ -9,7 +9,7 @@ export const Users = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 10px;
-  padding: 2px 5px;
+  padding: 12px 5px;
   border: 1px solid blueviolet;
   border-radius: 5px;
   font-size: large;
