@@ -1,6 +1,4 @@
-export const formatDateToBRL = (value: string | number | Date, style: 'long' | 'short') => {
-  const date = new Date(value);
-
+const formatDateToBRL = (value: Date | string, style: 'long' | 'short') => {
   const format = new Intl.DateTimeFormat('pt-br', {
     dateStyle: style,
   });
