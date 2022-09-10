@@ -10,12 +10,18 @@ const formatDateToBRL = (value: Date | string, style: 'long' | 'short') => {
   };
 };
 
-const dateWithFixedDay = (value: string, fixedDay: number) => {
-  const dateArray = value.split('-');
+const dateWithFixedDay = (value: Date | string, fixedDay: number) => {
+  if (typeof value === 'string') { 
+    const dateArray = value.split('-');
+    const [year, month] = dateArray.map(Number);
 
-  const [year, month] = dateArray.map(Number);
+    return new Date(year, month - 1, fixedDay);
+  } else {
+    const year = value.getFullYear();
+    const month = value.getMonth() + 1;
 
-  return new Date(year, month - 1, fixedDay);
+    return new Date(year, month - 1, fixedDay);
+  }
 };
 
 const currentDate = () => {
