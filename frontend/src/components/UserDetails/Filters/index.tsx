@@ -17,7 +17,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
   useEffect(() => {
     const date = H.dateWithFixedDay(new Date(), user.payday);
     const initialDataPeriod = H.formatDateToBRL(date, 'long');
-    const initialPeriodValue = H.formatCurrencyToBRL(+user.value / user.parcel);
+    const initialPeriodValue = H.formatCurrencyToBRL(+user.value / user.installments);
     
     setDataPeriod(initialDataPeriod);
     setPeriodValue(initialPeriodValue);
@@ -26,7 +26,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
   const calculate = (option: number) => {
     if (option === option3) option = 12;
 
-    const sum = (option * +user.value / user.parcel);
+    const sum = (option * +user.value / user.installments);
 
     if (+user.value >= sum) {
       const date = H.dateWithFixedDay(new Date(), user.payday);
@@ -40,7 +40,7 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
       setPeriodValue(newPeriodValue);
     } else {
       swal(
-        `${user.name} possui apenas ${user.parcel} parcelas`
+        `${user.name} possui apenas ${user.installments} parcelas`
       )
     }
   };
@@ -51,8 +51,8 @@ const UserDetailsFilter = ({ user }: UserProps): JSX.Element => {
 
     const newPeriodValue = H.calculatesTheValueOfTheChosenPeriod(
       chosenDate,
-      user.parcel,
-      +user.value / user.parcel,
+      user.installments,
+      +user.value / user.installments,
       currentDate
     );
 

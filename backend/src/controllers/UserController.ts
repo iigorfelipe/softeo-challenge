@@ -9,11 +9,11 @@ class UserController {
     res: Response,
   ): Promise<Response> => {
     const {
-      name, value, parcel, payday,
+      name, value, installments, payday,
     } = req.body;
 
     const newUser = await this.service.create({
-      name, value, parcel, payday,
+      name, value, installments, payday,
     });
 
     return res.status(200).json(newUser);

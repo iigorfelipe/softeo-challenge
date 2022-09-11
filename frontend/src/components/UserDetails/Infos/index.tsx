@@ -46,7 +46,7 @@ const UserDetailsInfos = ({ user }: UserProps): JSX.Element => {
       <C.Details>
 
         <C.Values>{H.formatCurrencyToBRL(+user.value)}</C.Values>
-        <C.Values>Parcelas: {user.parcel}</C.Values>
+        <C.Values>Parcelas: {user.installments}</C.Values>
         <C.Values>Vencimento: {user.payday}</C.Values>
   
       </C.Details>

@@ -12,13 +12,13 @@ const sumOfValuesFormatted = (values: number[]): string => {
   return H.formatCurrencyToBRL(sum);
 };
 
-const divideOfValues = (values: number[], parcels: number[]): number[] => {
+const divideOfValues = (values: number[], installments: number[]): number[] => {
   const array: number[] = [];
 
   values.forEach((value, a) => {
-    parcels.forEach((parcel, b) => {
+    installments.forEach((installment, b) => {
       if (a === b) {
-        array.push(value / parcel);
+        array.push(value / installment);
       }
     });
   });

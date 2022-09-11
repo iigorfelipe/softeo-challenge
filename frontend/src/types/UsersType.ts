@@ -2,7 +2,7 @@ export type UsersType = {
   id: number;
   name: string;
   value: string;
-  parcel: number;
+  installments: number;
   payday: number;
 }
 

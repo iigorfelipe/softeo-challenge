@@ -1,6 +1,6 @@
 export type UserType = {
   name: string;
   value: number;
-  parcel: number;
+  installments: number;
   payday: number;
 };

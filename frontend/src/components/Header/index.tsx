@@ -9,18 +9,18 @@ const Header = (): JSX.Element => {
   const { users } = useContext(UserContext);
 
   const values = users.map((user) => +user.value);
-  const parcels = users.map((user) => user.parcel);
+  const installments = users.map((user) => user.installments);
 
   const totalValue = H.sumOfValuesFormatted(values);
-  const totalParcels = H.sumOfValues(parcels);
-  const totalValueOfMonth = H.sumOfValuesFormatted(H.divideOfValues(values, parcels));
+  const totalInstallments = H.sumOfValues(installments);
+  const totalValueOfMonth = H.sumOfValuesFormatted(H.divideOfValues(values, installments));
 
   return (
     <C.Container>
 
       <C.Details>
         <C.Detail>Usuários: {users.length}</C.Detail>
-        <C.Detail>Parcelas: {totalParcels}</C.Detail>
+        <C.Detail>Parcelas: {totalInstallments}</C.Detail>
 
         <C.NextPage>
 

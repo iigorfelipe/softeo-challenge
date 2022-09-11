@@ -8,7 +8,7 @@ class UserModel extends Model {
 
   value: number;
 
-  parcel: number;
+  installments: number;
 
   payday: number;
 }
@@ -28,7 +28,7 @@ UserModel.init({
     allowNull: false,
     type: DataTypes.DECIMAL(10, 2),
   },
-  parcel: {
+  installments: {
     allowNull: false,
     type: DataTypes.INTEGER,
   },
