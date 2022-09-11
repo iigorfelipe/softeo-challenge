@@ -43,7 +43,7 @@
 - with npm
 
 ```
-git clone 
+git clone git@github.com:iigorfelipe/softeo-challenge.git
 ```
 
 ```
@@ -96,10 +96,7 @@ npm run dev
 # Install
 
 - with npm
-
-```
-git clone 
-```
+- with the project already cloned
 
 ```
 cd softeo-challenge
