@@ -10,7 +10,7 @@ type UserContextProps = {
 const UserContextProvider = ({children}: UserContextProps) => {
   const [users, setUsers] = useState<UsersType[]>([]);
 
-  getAllUser().then((response) => setUsers(response.data));;
+  getAllUser().then((response) => setUsers(response.data));
 
   return (
     <UserContext.Provider value={{
