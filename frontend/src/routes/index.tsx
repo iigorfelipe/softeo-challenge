@@ -12,8 +12,6 @@ const AppRoutes: React.FC<IProps> = () => {
 
         <Route path='/' element={ <Navigate to='/users' /> } />
         <Route path='/users' element={ <Main /> } />
-
-        {/* <Route path='/users/details' element={ <UsersDetails /> } /> */}
         <Route path='/user/:id' element={ <UserDetails /> } />
 
       </Routes>
