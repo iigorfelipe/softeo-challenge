@@ -14,6 +14,7 @@
 - [Development Tools](#development-tools)
 - [Installation](#installation)
 - [Local Usage](#local-usage)
+- [Future improvements](#points-i-want-to-improve-and-implement)
 - [References](#references)
 - [Author](#author)
 
@@ -115,6 +116,17 @@ cd softeo-challenge/backend
 ```bash
 npm run dev
 ```
+
+## Points I want to improve and implement
+
+- Validation of middlewares in the registration of new customers
+- New route to edit a customer
+- Document the api
+- Move most calculations done in Frontend to Backend
+- Limit the chosen date with the minimum date being the current day and the maximum date the last month of the installment
+- Create a Desktop version
+- Tests
+- Deploy
 
 ## References
 
