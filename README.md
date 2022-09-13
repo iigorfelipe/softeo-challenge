@@ -64,22 +64,14 @@ After the calculation, the application will show the result already converted in
 
 ## Installation
 
-- first clone and enter project folder
-
 ```bash
 git clone git@github.com:iigorfelipe/softeo-challenge.git
 ```
 
-```bash
-cd softeo-challenge
-```
-
-- then enter the frontend and backend folders to install them
-
 ### Frontend
 
 ```bash
-cd frontend
+cd softeo-challenge/frontend
 ```
 
 ```bash
@@ -89,7 +81,7 @@ npm install
 ### backend
 
 ```bash
-cd backend
+cd softeo-challenge/backend
 ```
 
 ```bash
@@ -101,7 +93,7 @@ npm install
 ### Frontend
 
 ```bash
-cd frontend
+cd softeo-challenge/frontend
 ```
 
 ```bash
@@ -111,7 +103,7 @@ npm run dev
 ### backend
 
 ```bash
-cd backend
+cd softeo-challenge/backend
 ```
 
 ```bash
