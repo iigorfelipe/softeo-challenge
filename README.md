@@ -11,17 +11,31 @@
   <img width="100%" src="https://octodex.github.com/images/manufacturetocat.png" />
 </div>
 
-# Backend
-
 ## Technologies
 
-<p>
+<br />
 
-  <img width="58" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt="nodejs-logo"/>
-  <img width="58" src="https://www.codions.com/assets/img/technologies/express.png"/>
-  <img width="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="typescript-logo"/>
+### Frontend
 
-</p>
+- TypeScript
+- React (`Vite`)
+- Hooks
+- Context
+- Styled Components
+- Axios
+- Sweetalert
+
+<br />
+
+### Backend
+
+- TypeScript
+- Node.js
+- Express.js
+- cors
+- dotenv
+- Sequelize
+- mysql2
 
 <br>
 
@@ -36,85 +50,72 @@
 </p>
 
 <br>
-<br>
 
-# Install
+## Installation
 
-- with npm
+<br />
 
-```
+- first clone and enter project folder
+
+```bash
 git clone git@github.com:iigorfelipe/softeo-challenge.git
 ```
 
-```
+```bash
 cd softeo-challenge
 ```
 
-```
-cd backend
-```
+<br />
 
-```
-npm install
-```
+- then enter the frontend and backend folders to install them
 
-# Local Usage
+<br />
 
-- with npm
+### Frontend
 
-```
-npm run dev
-```
-
-<br>
-<br>
-
-# Frontend
-
-## Technologies
-
-<p>
-
-  <img width="58" src="https://camo.githubusercontent.com/61e102d7c605ff91efedb9d7e47c1c4a07cef59d3e1da202fd74f4772122ca4e/68747470733a2f2f766974656a732e6465762f6c6f676f2e737667" alt="vitejs-logo" />
-  <img width="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react-logo" />
-  <img width="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="typescript-logo" />
-
-</p>
-
-<br>
-
-## Development Tools
-
-<p>
-
-  <img width="48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="vscode-logo"/>
-
-</p>
-
-<br>
-
-# Install
-
-- with npm
-- with the project already cloned
-
-```
-cd softeo-challenge
-```
-
-```
+```bash
 cd frontend
 ```
 
-```
+```bash
 npm install
 ```
 
-# Local Usage
+<br />
 
-- with npm
+### backend
 
+```bash
+cd backend
 ```
+
+```bash
+npm install
+```
+
+<br />
+
+## Local Usage
+
+<br />
+
+### Frontend
+
+```bash
+cd frontend
+```
+
+```bash
+npm run dev
+```
+
+### backend
+
+```bash
+cd backend
+```
+
+```bash
 npm run dev
 ```
 
@@ -123,13 +124,7 @@ npm run dev
 
 # References
 
-- ## Backend:
-
-- [Sequelize (Model.init) - Docs](https://sequelize.org/docs/v6/other-topics/typescript/#the-case-of-modelinit)
-
-- [Trybe - Course](https://app.betrybe.com/course)
-
-- ## Frontend:
+### Frontend:
 
 - [Vitejs - Docs](https://vitejs.dev/guide/)
 
@@ -148,3 +143,9 @@ npm run dev
 - [Como criar parcelas com data mês a mês - Objeto Date Javascript e nodejs - Video](https://www.youtube.com/watch?v=konXXMyM5Es&ab_channel=DevByMarcos)
 
 - [Date - Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+### Backend:
+
+- [Sequelize (Model.init) - Docs](https://sequelize.org/docs/v6/other-topics/typescript/#the-case-of-modelinit)
+
+- [Trybe - Course](https://app.betrybe.com/course)
