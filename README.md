@@ -11,6 +11,16 @@
   <img width="100%" src="https://octodex.github.com/images/manufacturetocat.png" />
 </div>
 
+## Summary
+
+- [Images](#images)
+- [Technologies](#technologies)
+- [Development Tools](#development-tools)
+- [Installation](#installation)
+- [Local Usage](#local-usage)
+- [References](#references)
+- [Author](#author)
+
 <div align="center">
   <h2> Wireframe made in Excalidraw </h2>
 
