@@ -16,7 +16,7 @@
 ### Frontend
 
 - TypeScript
-- React (`Vite`)
+- React - `Vite (react-ts)`
 - Hooks
 - Context
 - Styled Components
@@ -99,7 +99,7 @@ cd backend
 npm run dev
 ```
 
-# References
+## References
 
 ### Frontend:
 
