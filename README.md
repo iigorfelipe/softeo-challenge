@@ -28,6 +28,8 @@
 
 <img width="100%" src="https://user-images.githubusercontent.com/87145566/189784324-45fec122-bbee-47a5-a953-af65dd33b83b.png" />
 
+- Note: Only two screens were implemented, the main screen and the user details screen, but the screen that performs the calculation with all users will soon be developed.
+
 </div>
 
 ## About this app
