@@ -13,8 +13,6 @@
 
 ## Technologies
 
-<br />
-
 ### Frontend
 
 - TypeScript
@@ -24,8 +22,6 @@
 - Styled Components
 - Axios
 - Sweetalert
-
-<br />
 
 ### Backend
 
@@ -37,8 +33,6 @@
 - Sequelize
 - mysql2
 
-<br>
-
 ## Development Tools
 
 <p>
@@ -49,11 +43,7 @@
 
 </p>
 
-<br>
-
 ## Installation
-
-<br />
 
 - first clone and enter project folder
 
@@ -65,11 +55,7 @@ git clone git@github.com:iigorfelipe/softeo-challenge.git
 cd softeo-challenge
 ```
 
-<br />
-
 - then enter the frontend and backend folders to install them
-
-<br />
 
 ### Frontend
 
@@ -81,8 +67,6 @@ cd frontend
 npm install
 ```
 
-<br />
-
 ### backend
 
 ```bash
@@ -92,13 +76,9 @@ cd backend
 ```bash
 npm install
 ```
-
-<br />
 
 ## Local Usage
 
-<br />
-
 ### Frontend
 
 ```bash
@@ -118,9 +98,6 @@ cd backend
 ```bash
 npm run dev
 ```
-
-<br>
-<br>
 
 # References
 
