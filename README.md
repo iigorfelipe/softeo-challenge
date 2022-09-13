@@ -14,6 +14,7 @@
 ## Summary
 
 - [Images](#images)
+- [About](#about-this-app)
 - [Technologies](#technologies)
 - [Development Tools](#development-tools)
 - [Installation](#installation)
@@ -39,8 +40,6 @@ The purpose of this application is to calculate how much you will receive in rea
 The application will take the date you choose and on top of it will make a calculation with the data of the chosen customer, such as the total amount that this customer owes you, the number of times this customer chose to pay this amount in installments, and the due date of the plots.
 
 After the calculation, the application will show the result already converted into reais for the chosen period.
-
-- Note: Only two screens were implemented, the main screen and the detailed calculation screen for each user, but the screen that performs the calculation with all users will soon be developed.
 
 ## Technologies
 
