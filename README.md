@@ -137,3 +137,7 @@ npm run dev
 - [Sequelize (Model.init) - Docs](https://sequelize.org/docs/v6/other-topics/typescript/#the-case-of-modelinit)
 
 - [Trybe - Course](https://app.betrybe.com/course)
+
+## Author
+
+[Igor Felipe - Linkedin](https://www.linkedin.com/in/iigor-felipe/)
