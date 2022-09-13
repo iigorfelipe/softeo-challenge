@@ -78,7 +78,7 @@ After the calculation, the application will show the result already converted in
 git clone git@github.com:iigorfelipe/softeo-challenge.git
 ```
 
-### Frontend
+- ### Frontend
 
 ```bash
 cd softeo-challenge/frontend
@@ -88,7 +88,7 @@ cd softeo-challenge/frontend
 npm install
 ```
 
-### backend
+- ### Backend
 
 ```bash
 cd softeo-challenge/backend
@@ -100,7 +100,7 @@ npm install
 
 ## Local Usage
 
-### Frontend
+- ### Frontend
 
 ```bash
 cd softeo-challenge/frontend
@@ -110,7 +110,7 @@ cd softeo-challenge/frontend
 npm run dev
 ```
 
-### backend
+- ### Backend
 
 ```bash
 cd softeo-challenge/backend
