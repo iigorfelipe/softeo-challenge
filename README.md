@@ -151,6 +151,8 @@ npm run dev
 
 ## Images
 
+- Note: This app was made for mobile, but soon I will add a desktop version
+
 <div align="center">
   <img width="340px" height="551px" src="https://user-images.githubusercontent.com/87145566/189925416-4eb4c8a8-8a1d-442c-bbda-1450fa2188d9.png" />
   <img width="340px" height="551px" src="https://user-images.githubusercontent.com/87145566/189925715-878cf68c-07bd-4926-9b58-8a53a309aceb.png" />
