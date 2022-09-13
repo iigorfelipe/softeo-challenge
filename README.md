@@ -6,11 +6,6 @@
   </i>
 </p>
 
-<div align="center">
-  🔧  README AND PROJECT IN DEVELOPMENT 🔧 
-  <img width="100%" src="https://octodex.github.com/images/manufacturetocat.png" />
-</div>
-
 ## Summary
 
 - [Images](#images)
