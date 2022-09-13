@@ -138,6 +138,14 @@ npm run dev
 
 - [Trybe - Course](https://app.betrybe.com/course)
 
+## Images
+
+<div align="center">
+  <img width="340px" height="551px" src="https://user-images.githubusercontent.com/87145566/189925416-4eb4c8a8-8a1d-442c-bbda-1450fa2188d9.png" />
+  <img width="340px" height="551px" src="https://user-images.githubusercontent.com/87145566/189925715-878cf68c-07bd-4926-9b58-8a53a309aceb.png" />
+  <img width="340px" height="553px" src="https://user-images.githubusercontent.com/87145566/189926285-1bc274a0-9f38-42c7-be19-a2e113fc159d.png" />
+</div>
+
 ## Author
 
 [Igor Felipe - Linkedin](https://www.linkedin.com/in/iigor-felipe/)
